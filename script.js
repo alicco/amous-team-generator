@@ -383,7 +383,7 @@ function startRouletteExtraction(playersToUse) {
             // (rispettando i limiti di dimensione calcolati)
             const availableTeams = [];
             for (let i = 0; i < numTeams; i++) {
-                if (teams[i].length < teamSizes[i]) {
+                if (teams[i].length < 4) {
                     availableTeams.push(i);
                 }
             }
@@ -404,7 +404,7 @@ function startRouletteExtraction(playersToUse) {
                 }
                 
                 // Evidenzia la squadra corrente (solo se è disponibile)
-                if (teams[currentTeam].length < teamSizes[currentTeam]) {
+                if (teams[currentTeam].length < 4) {
                     document.getElementById(`team${currentTeam}-list`).parentElement.classList.add('highlight');
                 }
                 
