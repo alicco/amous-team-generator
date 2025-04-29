@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmoUs - Generatore di Squadre Avanzato</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="brand-name">AmoUs</span> <span class="subtitle">Generatore di Squadre</span></h1>
+        </header>
+        
+        <main>
+            <div class="card">
+                <div class="button-group">
+                    <button id="generate-teams" class="btn btn-success">
+                        <i class="fas fa-users"></i> Genera Squadre
+                    </button>
+                    <button id="step-by-step" class="btn btn-purple">
+                        <i class="fas fa-random"></i> Estrazione Roulette
+                    </button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Giocatori Disponibili</h2>
+                <p class="info-text">Clicca sui giocatori per selezionarli per la partita</p>
+                <div id="player-buttons" class="player-buttons">
+                    <!-- I pulsanti dei giocatori verranno aggiunti qui via JavaScript -->
+                </div>
+                <div class="add-player-container">
+                    <div class="input-group">
+                        <input type="text" id="player-name" placeholder="Inserisci nome giocatore">
+                        <button id="add-player" class="btn btn-primary">
+                            <i class="fas fa-user-plus"></i> Aggiungi Giocatore
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Giocatori Selezionati</h2>
+                <p class="info-text">Giocatori che parteciperanno alla partita</p>
+                <div id="selected-players" class="selected-players">
+                    <!-- I giocatori selezionati verranno mostrati qui -->
+                </div>
+                <div class="selection-actions">
+                    <button id="select-all" class="btn btn-sm btn-secondary">
+                        <i class="fas fa-check-double"></i> Seleziona tutti
+                    </button>
+                    <button id="deselect-all" class="btn btn-sm btn-danger">
+                        <i class="fas fa-times"></i> Deseleziona tutti
+                    </button>
+                </div>
+            </div>
+            
+            <div class="results">
+                <h2>Squadre Generate</h2>
+                <p class="info-text">Le squadre avranno un numero omogeneo di giocatori</p>
+                <div id="teams-container" class="teams-container"></div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Creato con ❤️ per divertirsi insieme</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
